@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
-import { updateField } from "./formSlice";
+import { updateField, submitForm } from "./formSlice";
 
 
 const Form = () => {
@@ -17,30 +17,34 @@ const Form = () => {
     }
    
     return(
-       <form onChange={handleSubmit}>
+       <form onSubmit={handleSubmit}>
             <input 
             type='text'
             name='name'
             value={formData.name}
             onChange={handleChange}
+            placeholder="name"
             />
              <input 
             type='text'
             name='email'
             value={formData.email}
             onChange={handleChange}
+            placeholder="email"
             />
               <input 
             type='text'
             name='username'
             value={formData.username}
             onChange={handleChange}
+            placeholder="username"
             />
              <input 
             type='password'
             name='password'
             value={formData.password}
             onChange={handleChange}
+            placeholder="password"
             />
 
             <button>Submit</button>

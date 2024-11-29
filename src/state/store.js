@@ -4,8 +4,8 @@ import formReducer from "../Form/formSlice";
 
 export const store = configureStore({
     reducer: {
-        counter: counterReducer,
         form: formReducer,
+        counter: counterReducer
         
         
     }

@@ -8,7 +8,9 @@ const initialState = {
         email: '',
         username: '',
         password: ''
-    }
+    },
+
+    submittedData:{}
 }
 
 const formSlice = createSlice({
@@ -20,7 +22,7 @@ const formSlice = createSlice({
             state.form[field] = value
         },
         submitForm: (state) =>{
-            state.submittedData = { ... state.form}
+            state.submittedData = { ...state.form}
             state.form = { name: '', email: '', username: '', password:''}
         }
     }

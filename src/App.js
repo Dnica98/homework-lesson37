@@ -5,9 +5,9 @@ import Form from './Form';
 function App() {
   return (
     <div >
-      <Counter />
       <Form />
       <PersonalData />
+      <Counter />
       
     </div>
   );

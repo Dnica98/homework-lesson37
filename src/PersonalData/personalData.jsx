@@ -3,12 +3,12 @@ import { useSelector } from "react-redux"
 
 
 const PersonalData = () => {
-    const formData = useSelector((state)=> state.form.data)
+    const formData = useSelector((state) => state.form.submittedData)
 
     return (
         <div>
             <h3>My Page:</h3>
-            {Object.keys(formData).lenght > 0 ?(
+            {formData && Object.keys(formData).length > 0 ? (
                 <ul>
                     <li>Name:{formData.name}</li>
                     <li>Email:{formData.email}</li>
